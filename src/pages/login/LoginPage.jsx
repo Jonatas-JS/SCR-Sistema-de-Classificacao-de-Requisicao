@@ -1,7 +1,9 @@
-import styles from './LoginApp.module.css'
+import styles from './LoginPage.module.css'
 import { Scroll, UserCircle } from 'phosphor-react'
+import { useNavigate } from 'react-router-dom';
 
-export function LoginApp() {
+function LoginPage() {
+
   return (
     <div className={styles.container}>
       <div className={styles.logoSpace}>
@@ -28,3 +30,5 @@ export function LoginApp() {
     </div>
   )
 }
+
+export default LoginPage;
