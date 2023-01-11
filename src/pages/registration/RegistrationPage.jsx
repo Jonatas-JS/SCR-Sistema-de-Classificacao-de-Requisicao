@@ -1,4 +1,4 @@
-import styles from './RegistrationPage.module.css'
+import styles from './RegsitrationPage.module.css'
 
 function RegistrationPage() {
   return (

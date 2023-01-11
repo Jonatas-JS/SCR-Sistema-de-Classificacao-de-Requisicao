@@ -1,18 +1,27 @@
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import LoginPage from './pages/login/LoginPage'
-import { BrowserRouter, Route } from 'react-router-dom'
+import HomePage from './pages/home/HomePage'
+import RegistrationPage from './pages/registration/RegistrationPage'
+import RequestPage from './pages/request/RequestPage'
+import Form from './pages/form/Form'
+import DashboardPage from './pages/dashboard/DashboardPage'
 
 function App() {
 
   return (
     <div className="App">
-      <LoginPage />
-      <BrowserRouter>
-        <Route path='/' element={(<LoginPage />)} />
-        <Route path='/home' element={(<HomePage />)} />
-        <Route path='/registration'element={(<RegistrationPage />)} />
-        <Route path='/request'element={(<RequestPage />)} />
-      </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path='/' element={(<LoginPage />)} />
+          <Route path='/home' element={(<HomePage />)} />
+          <Route path='/registration' element={(<RegistrationPage />)} />
+          <Route path='/request' element={(<RequestPage />)} />
+          <Route path='/form' element={(<Form />)} />
+          <Route path='/dashboard' element={(<DashboardPage />)} />
+        </Routes>
+      </Router>
     </div>
   )
 }

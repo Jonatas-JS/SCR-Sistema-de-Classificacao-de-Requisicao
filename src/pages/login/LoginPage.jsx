@@ -1,8 +1,31 @@
 import styles from './LoginPage.module.css'
 import { Scroll, UserCircle } from 'phosphor-react'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import HomePage from '../home/HomePage'
+
+const user = [
+  {
+    id: 1,
+    userType: 'adm',
+    userName: 'Jônatas Fernandes',
+    userLogin: 'jonatas.silva',
+    userPassword: '123',
+  },
+  {
+    id: 2,
+    userType: 'user',
+    userName: 'Carlos Eduardo',
+    userLogin: 'carlos.romano',
+    userPassword: '123',
+  },
+]
+
 
 function LoginPage() {
+  
+  //Falta a realizar a validação por user/password
+  const userType = user[0].userType;
+  console.log(userType)
 
   return (
     <div className={styles.container}>
@@ -24,8 +47,9 @@ function LoginPage() {
           <p>Senha</p>
           <input type="password" name="passwordLogin" id="passwordLogin" />
         </div>
+        
+          <Link to='/home'><button type="submit">ENTRAR</button></Link>
 
-          <button type="submit">ENTRAR</button>
       </div>
     </div>
   )
