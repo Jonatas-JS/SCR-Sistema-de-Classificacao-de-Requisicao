@@ -1,17 +1,37 @@
 .buttonHomeAndExit {
   display: flex;
+  gap: .62rem;
 }
 .homeButton, .exitButton {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: .5rem;
 
   background-color: var(--white-100);
-  padding: .5rem .62rem;
+  padding: .2rem .62rem;
+  border-radius: .5rem;
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+.homeButton span, .exitButton span {
+  display: flex;
+  /* align-items: center; */
 }
 .homeButton {
   color: var(--blue-300);
 }
 .exitButton {
   color: var(--red-100);
+}
+.homeButton:hover {
+  color: var(--white-100);
+  background-color: var(--blue-300);
+}
+.exitButton:hover {
+  color: var(--white-100);
+  background-color: var(--red-100);
+
 }

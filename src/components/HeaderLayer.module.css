@@ -1,0 +1,10 @@
+.headerLayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+.headerLayer h1 {
+  font-size: 2rem;
+}

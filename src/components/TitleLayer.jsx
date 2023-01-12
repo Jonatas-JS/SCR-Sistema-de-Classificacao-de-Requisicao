@@ -4,8 +4,8 @@ import ButtonHomeAndExit from './ButtonHomeAndExit'
 
 export function TitleLayer() {
   return (
-    <div>
-      <div>
+    <div className={styles.titleLayer}>
+      <div className={styles.titleHeader}>
         <h1>SCR</h1>
         <p>Sistema de Classificação de Requisições</p>
       </div>
