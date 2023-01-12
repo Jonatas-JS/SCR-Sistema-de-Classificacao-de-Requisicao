@@ -1,0 +1,17 @@
+.buttonHomeAndExit {
+  display: flex;
+}
+.homeButton, .exitButton {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  background-color: var(--white-100);
+  padding: .5rem .62rem;
+}
+.homeButton {
+  color: var(--blue-300);
+}
+.exitButton {
+  color: var(--red-100);
+}

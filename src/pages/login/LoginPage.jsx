@@ -9,24 +9,28 @@ const user = [
     userType: 'adm',
     userName: 'Jônatas Fernandes',
     userLogin: 'jonatas.silva',
-    userPassword: '123',
+    userPassword: '321',
   },
   {
     id: 2,
-    userType: 'user',
+    userType: 'manager',
     userName: 'Carlos Eduardo',
     userLogin: 'carlos.romano',
     userPassword: '123',
   },
+  {
+    id: 3,
+    userType: 'user',
+    userName: 'Pedro Rodrigues',
+    userLogin: 'pedro.silva',
+    userPassword: '123',
+  },
 ]
 
+//Falta a realizar a validação por user/password
+export const userType = user[0].userType;
 
 function LoginPage() {
-  
-  //Falta a realizar a validação por user/password
-  const userType = user[0].userType;
-  console.log(userType)
-
   return (
     <div className={styles.container}>
       <div className={styles.logoSpace}>
