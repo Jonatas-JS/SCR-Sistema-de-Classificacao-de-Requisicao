@@ -1,0 +1,7 @@
+.container {
+  min-width: 710px;
+  padding: 3.56rem 8rem;
+  background-color: var(--blue-300);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: .62rem;
+}

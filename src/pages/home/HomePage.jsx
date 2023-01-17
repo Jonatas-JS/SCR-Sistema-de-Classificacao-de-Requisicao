@@ -5,9 +5,11 @@ import { House, UserFocus, ListPlus, CircleWavyCheck } from 'phosphor-react'
 import { userType } from '../login/LoginPage';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
+import { Link } from 'react-router-dom'
 
 function HomePage() {
   if (userType == 'adm') {
+    
     return (
         <div>
           <TitleLayer />
@@ -18,71 +20,85 @@ function HomePage() {
             />
             <div className={styles.menuButtons}>
               <div>
-                <MenuButton 
-                icon={<UserFocus size={36} weight='bold'/>}
-                name='Cadastro de Usuário'
-                />
+                <Link to='/registration'>
+                  <MenuButton 
+                  icon={<UserFocus size={36} weight='bold'/>}
+                  name='Cadastro de Usuário'
+                  />
+                </Link>
               </div>
 
               <div>
-                <MenuButton 
-                icon={<ListPlus size={36} weight='bold'/>}
-                name='Cadastrar Requisição'
-                />
+                <Link to='/request'>
+                  <MenuButton 
+                  icon={<ListPlus size={36} weight='bold'/>}
+                  name='Cadastrar Requisição'
+                  />
+                </Link>
               </div>
 
               <div>
-                <MenuButton 
-                icon={<CircleWavyCheck size={36} weight='bold'/>}
-                name='Formulário de Satisfação'
-                />
+                <Link to='/form-page'>
+                  <MenuButton 
+                  icon={<CircleWavyCheck size={36} weight='bold'/>}
+                  name='Formulário de Satisfação'
+                  />
+                </Link>
               </div>
             </div>
           </div>
       </div>
     )
   } else if (userType == 'manager') {
+
     return (
       <div>
         <TitleLayer />
         <div className={styles.container}>
           <HeaderLayer
-              icon={<House size={36} weight='bold'/>}
-              name='Home'
-              />
+          icon={<House size={36} weight='bold'/>}
+          name='Home'
+          />
           <div className={styles.menuButtons}>
             <div>
-              <MenuButton 
-              icon={<ListPlus size={36} weight='bold'/>}
-              name='Cadastrar Requisição'
-              />
+              <Link to='/request'>
+                <MenuButton 
+                icon={<ListPlus size={36} weight='bold'/>}
+                name='Cadastrar Requisição'
+                />
+              </Link>
             </div>
 
             <div>
-              <MenuButton 
-              icon={<CircleWavyCheck size={36} weight='bold'/>}
-              name='Formulário de Satisfação'
-              />
+              <Link to='/form-page'>
+                <MenuButton 
+                icon={<CircleWavyCheck size={36} weight='bold'/>}
+                name='Formulário de Satisfação'
+                />
+              </Link>
             </div>
           </div>
         </div>
     </div>
   )
   } else {
+
     return (
       <div>
         <TitleLayer />
         <div className={styles.container}>
           <HeaderLayer
-              icon={<House size={36} weight='bold'/>}
-              name='Home'
-              />
+          icon={<House size={36} weight='bold'/>}
+          name='Home'
+          />
           <div className={styles.menuButtons}>
-            <div>
-              <MenuButton 
-              icon={<CircleWavyCheck size={36} weight='bold'/>}
-              name='Formulário de Satisfação'
-              />
+             <div>
+              <Link to='/form-page'>
+                <MenuButton 
+                icon={<CircleWavyCheck size={36} weight='bold'/>}
+                name='Formulário de Satisfação'
+                />
+              </Link>
             </div>
           </div>
         </div>

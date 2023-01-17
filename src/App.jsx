@@ -5,7 +5,7 @@ import LoginPage from './pages/login/LoginPage'
 import HomePage from './pages/home/HomePage'
 import RegistrationPage from './pages/registration/RegistrationPage'
 import RequestPage from './pages/request/RequestPage'
-import Form from './pages/form/Form'
+import FormPage from './pages/form/FormPage'
 import DashboardPage from './pages/dashboard/DashboardPage'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path='/home' element={(<HomePage />)} />
           <Route path='/registration' element={(<RegistrationPage />)} />
           <Route path='/request' element={(<RequestPage />)} />
-          <Route path='/form' element={(<Form />)} />
+          <Route path='/form-page' element={(<FormPage />)} />
           <Route path='/dashboard' element={(<DashboardPage />)} />
         </Routes>
       </Router>

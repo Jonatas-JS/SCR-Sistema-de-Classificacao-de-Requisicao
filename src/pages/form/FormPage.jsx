@@ -1,16 +1,16 @@
-import styles from './RequestPage.module.css'
+import styles from './FormPage.module.css'
 
 import { TitleLayer } from '../../components/TitleLayer';
 
-function RequestPage() {
+function FormPage() {
   return (
     <div>
         <TitleLayer />
       <div className={styles.container}>
-        <h1>RequestPage</h1>
+        <h1>FormPage</h1>
       </div>
     </div>
   )
 }
 
-export default RequestPage;
+export default FormPage;
