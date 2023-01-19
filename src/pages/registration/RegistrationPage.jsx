@@ -7,42 +7,35 @@ import { HeaderLayer } from '../../components/HeaderLayer'
 export const ListEmpresa = [
   {
     id: 1,
-    name: 'Cocalqui'
+    name: 'Cocalqui',
+    setores: [
+      'Cronoanálise',
+      'Qualidade',
+      'PVC',
+    ]
   },
   {
     id: 2,
-    name: 'Aniger'
-  },
-  {
-    id: 3,
-    name: 'Cocalqui/Aniger'
+    name: 'Aniger',
+    setores: [
+      'Qualidade',
+      'Manutenção'
+    ]
   }
 ]
 
-export const ListSetor = [
-  {
-    id: 1,
-    empresa: 'Cocalqui',
-    setor: 'Cronoanálise'
-  },
-  {
-    id: 2,
-    empresa: 'Aniger',
-    setor: 'Qualidade'
-  },
-  {
-    id: 3,
-    empresa: 'Cocalqui',
-    setor: 'PVC'
-  },
-  {
-    id: 4,
-    empresa: 'Aniger',
-    setor: 'Manutenção'
-  },
-]
-
 function RegistrationPage() {
+
+  function renderList() {
+    const inputListEmpresa = (document.querySelector('#ListEmpresa')).value
+    if(inputListEmpresa == 'Cocalqui') {
+      console.log('Show!')
+    }
+
+    for(let i = 0; i < ListEmpresa.length; i++) {
+      // console.log(ListEmpresa[i].name)
+    }
+  }
 
   return (
     <div>
@@ -54,49 +47,65 @@ function RegistrationPage() {
         />
         <p>*preencha com atenção todos os campos.</p>
         <div className={styles.camposInputs}>
-          <p>
-            <label htmlFor="">Empresa: </label>
-            <select name="ListEmpresa" id="ListEmpresa">
-              <option selected disabled>escolha a empresa</option>
-              <option>Cocalqui</option>
-              <option>Aniger</option>
-            </select>
-          </p>
+          <table>
+            <tr>
+              <th>Empresa:</th>
+              <td>
+                <select id="ListEmpresa" onChange={renderList}>
+                  <option selected disabled>escolha a empresa</option>
+                  <option>Cocalqui</option>
+                  <option>Aniger</option>
+                </select>
+              </td>
+            </tr>
 
-          <p>
-            <label htmlFor="">Matrícula: </label>
-            <input type="text" name="" id="" />
-          </p>
+            <tr>
+              <th>Matrícula:</th>
+              <td>
+               <input type="text" id="inputMatricula" />
+              </td>
+            </tr>
 
-          <p>
-            <label htmlFor="">Nome: </label>
-            <input type="text" name="" id="" />
-          </p>
+            <tr>
+              <th>Nome:</th>
+              <td>
+                <input type="text" id="InputName" />
+              </td>
+            </tr>
 
-          <p>
-            <label htmlFor="">Setor: </label>
-            <select name="ListSetor" id="ListSetor">
-              <option selected disabled>escolha o setor</option>
-              <option>Cronoanálise</option>
-              <option>Qualidade</option>
-              <option>PVC</option>
-              <option>Manutenção</option>
-            </select>
-          </p>
+            <tr>
+              <th>Setor:</th>
+              <td>
+                <select id="ListSetor">
+                  <option selected disabled>escolha o setor</option>
+                  <option>Cronoanálise</option>
+                  <option>Qualidade</option>
+                  <option>PVC</option>
+                  <option>Manutenção</option>
+                </select>
+              </td>
+            </tr>
 
-          <p>
-            <label htmlFor="">E-mail: </label>
-            <input type="email" name="" id="" />
-          </p>
+            <tr>
+              <th>E-mail:</th>
+              <td>
+               <input type="email" name="" id="" />
+              </td>
+            </tr>
+            <tr>
+              <td className={styles.tdDescription} colSpan={2}>*somente é permitido o cadastro e e-mail corporativo. Esse será o e-mail de login no sistema.</td>
+            </tr>
 
-          <p>*somente é permitido o cadastro e e-mail corporativo. Esse será o e-mail de login no sistema.</p>
-
-          <p>
-            <label htmlFor="">Senha: </label>
-            <input type="password" name="" id="" />
-          </p>
-
-          <p>*essa será a senha que será usada para acessar o sistema.</p>
+            <tr>
+              <th>Senha:</th>
+              <td>
+               <input type="password" name="" id="" />
+              </td>
+            </tr>
+            <tr>
+              <td className={styles.tdDescription} colSpan={2}>*essa será a senha que será usada para acessar o sistema.</td>
+            </tr>
+          </table>
 
         </div>
       </div>

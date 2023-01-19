@@ -5,11 +5,12 @@
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: .62rem;
 }
-.container p {
+.tdDescription, .container p {
   color: var(--blue-500);
   
   font-size: .75rem;
   font-weight: 400;
+  text-align: left;
 }
 .camposInputs {
   display: flex;
@@ -25,16 +26,21 @@
   font-weight: 700;
   line-height: 2.5rem;
 }
+.container input,
+.container select,
+.container select option {
+  color: var(--blue-500);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+}
 .container input, .container select {
   /* width: 100%; */
   border: none;
   border-radius: .2rem;
   height: 1.8rem;
   padding: 0 .62rem;
-
-  font-family: 'Roboto', sans-serif;
-  font-size: .75rem;
-  font-weight: 700;
 }
 .container input:focus, .container select:focus {
   outline: none;
