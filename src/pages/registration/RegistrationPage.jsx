@@ -6,7 +6,7 @@ import { HeaderLayer } from '../../components/HeaderLayer'
 
 export const ListEmpresa = [
   {
-    id: 1,
+    id: 0,
     name: 'Cocalqui',
     setores: [
       'Cronoanálise',
@@ -15,7 +15,7 @@ export const ListEmpresa = [
     ]
   },
   {
-    id: 2,
+    id: 1,
     name: 'Aniger',
     setores: [
       'Qualidade',
@@ -24,18 +24,22 @@ export const ListEmpresa = [
   }
 ]
 
-function RegistrationPage() {
+const renderListEmpresa = ListEmpresa.map(
+  (item) => <option>{item.name}</option>
+)
+const renderListSetores = ListEmpresa[0].setores.map(
+  (item) => <option>{item}</option>
+)
 
-  function renderList() {
-    const inputListEmpresa = (document.querySelector('#ListEmpresa')).value
-    if(inputListEmpresa == 'Cocalqui') {
-      console.log('Show!')
-    }
-
-    for(let i = 0; i < ListEmpresa.length; i++) {
-      // console.log(ListEmpresa[i].name)
-    }
+function sectionEmpresa() {
+  const mostrar = document.querySelector('#ListEmpresa').value
+  for (let i = 0; ListEmpresa[i].name != mostrar; i++ ) {
+    console.log('Ainda não é esse')
   }
+  console.log(mostrar)
+}
+
+function RegistrationPage() {
 
   return (
     <div>
@@ -51,10 +55,9 @@ function RegistrationPage() {
             <tr>
               <th>Empresa:</th>
               <td>
-                <select id="ListEmpresa" onChange={renderList}>
+                <select id="ListEmpresa" onChange={sectionEmpresa}>
                   <option selected disabled>escolha a empresa</option>
-                  <option>Cocalqui</option>
-                  <option>Aniger</option>
+                  {renderListEmpresa}
                 </select>
               </td>
             </tr>
@@ -78,10 +81,7 @@ function RegistrationPage() {
               <td>
                 <select id="ListSetor">
                   <option selected disabled>escolha o setor</option>
-                  <option>Cronoanálise</option>
-                  <option>Qualidade</option>
-                  <option>PVC</option>
-                  <option>Manutenção</option>
+                  {renderListSetores}
                 </select>
               </td>
             </tr>
@@ -89,7 +89,7 @@ function RegistrationPage() {
             <tr>
               <th>E-mail:</th>
               <td>
-               <input type="email" name="" id="" />
+               <input type="email" id="inputEmail" />
               </td>
             </tr>
             <tr>
@@ -99,7 +99,7 @@ function RegistrationPage() {
             <tr>
               <th>Senha:</th>
               <td>
-               <input type="password" name="" id="" />
+               <input type="password" id="inputPassword" />
               </td>
             </tr>
             <tr>
