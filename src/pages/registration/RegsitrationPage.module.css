@@ -5,3 +5,37 @@
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: .62rem;
 }
+.container p {
+  color: var(--blue-500);
+  
+  font-size: .75rem;
+  font-weight: 400;
+}
+.camposInputs {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+.container p label {
+  color: var(--white-100);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.container input, .container select {
+  /* width: 100%; */
+  border: none;
+  border-radius: .2rem;
+  height: 1.8rem;
+  padding: 0 .62rem;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.container input:focus, .container select:focus {
+  outline: none;
+ }
