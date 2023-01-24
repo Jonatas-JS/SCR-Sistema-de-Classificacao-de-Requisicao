@@ -32,11 +32,11 @@ function RegistrationPage() {
   const [selectedCompany, setSelectedCompany] = useState(null)
 
   const renderListEmpresa = () => ListEmpresa.map(
-  (item) => <option>{item.name}</option>
+  (item) => <option key={Number(Math.random() * 3)}>{item.name}</option>
   )
 
   const renderListSetores = () => ListEmpresa.find((item) => item.name === selectedCompany)?.setores.map(
-  (item) => <option>{item}</option>
+  (item) => <option key={Number(Math.random() * 3)}>{item}</option>
   )
 
   return (

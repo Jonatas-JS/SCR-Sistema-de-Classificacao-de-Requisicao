@@ -24,9 +24,7 @@
 }
 
 body {
-
   display: flex;
-  /* width: 100vw; */
   height: 100vh;
   /* min-height: 100vh; */
   place-items: center;
@@ -49,3 +47,25 @@ button {
 button:hover {
   background-color: var(--blue-200);
 }
+input,
+select,
+select option,
+textarea {
+  color: var(--blue-500);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: .2rem;
+  height: 1.8rem;
+  padding: 0 .62rem;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+ }
+ textarea {
+  resize: none;
+  padding: .62rem;
+ }

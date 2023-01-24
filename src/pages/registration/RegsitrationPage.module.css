@@ -21,27 +21,7 @@ table th {
 
   text-align: left;
 }
-
-.container input,
-.container select,
-.container select option {
-  color: var(--blue-500);
-
-  font-family: 'Roboto', sans-serif;
-  font-size: .75rem;
-  font-weight: 700;
-}
-.container input, .container select {
-  /* width: 100%; */
-  border: none;
-  border-radius: .2rem;
-  height: 1.8rem;
-  padding: 0 .62rem;
-}
-.container input:focus, .container select:focus {
-  outline: none;
- }
- .buttonCadastrar {
+.buttonCadastrar {
   display: flex;
   justify-content: right;
 }
