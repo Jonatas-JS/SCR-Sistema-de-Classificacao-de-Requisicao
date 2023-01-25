@@ -1,8 +1,9 @@
-import styles from './RequestPage.module.css'
+import styles from './RequestPage.module.css';
 
-import { ListPlus } from 'phosphor-react'
+import { ListPlus, UserCircle, Paperclip } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
+import { ButtonAction } from '../../components/ButtonAction'
 
 function RequestPage() {
   return (
@@ -42,17 +43,32 @@ function RequestPage() {
             </select>
           </div>
 
-          <div className={styles.notaFiscal}>
-            <label>NF: </label>
-            <input type="text" id="notaFiscal" />
+          <div className={styles.nfRequisicao}>
+            <div className={styles.notaFiscal}>
+              <label>NF: </label>
+              <input type="text" id="notaFiscal" />
+            </div>
+
+            <label>Resquisição: </label>
+            <input type="date" id="" />
           </div>
 
-          <label>Resquisição: </label>
-          <input type="date" id="" />
-
           <p><label>Descrição: </label></p>
-          <textarea cols="30" rows="10"  ></textarea>
+          <textarea cols="30" rows="10"  placeholder='Breve descrição da requisição.'></textarea>
         </div>
+
+        <div className={styles.buttonsAvtions}>
+            <ButtonAction 
+            icon={<Paperclip size={25} />}
+            name='Anexar'
+            />
+
+            <ButtonAction 
+            icon={<UserCircle size={25} />}
+            name='Cadastrar'
+            />
+        </div>
+
       </div>
     </div>
   )

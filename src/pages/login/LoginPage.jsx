@@ -1,7 +1,7 @@
 import styles from './LoginPage.module.css'
 import { Scroll, UserCircle } from 'phosphor-react'
 import { Link } from 'react-router-dom';
-import HomePage from '../home/HomePage'
+import { ButtonAction } from '../../components/ButtonAction'
 
 const user = [
   {
@@ -51,8 +51,13 @@ function LoginPage() {
           <p>Senha</p>
           <input type="password" name="passwordLogin" id="passwordLogin" />
         </div>
-        
-          <Link to='/home'><button type="submit">ENTRAR</button></Link>
+
+        <div className={styles.buttonAction}>
+          <Link to='/home'><ButtonAction 
+          icon=''
+          name='Entrar'
+          /></Link>
+        </div>
 
       </div>
     </div>

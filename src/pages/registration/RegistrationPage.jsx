@@ -2,8 +2,9 @@ import styles from './RegsitrationPage.module.css'
 
 import { useState } from 'react';
 import { TitleLayer } from '../../components/TitleLayer';
-import { UserFocus } from 'phosphor-react';
+import { UserFocus, ArrowCircleRight } from 'phosphor-react';
 import { HeaderLayer } from '../../components/HeaderLayer'
+import { ButtonAction } from '../../components/ButtonAction';
 
 export const ListEmpresa = [
   {
@@ -106,7 +107,10 @@ function RegistrationPage() {
           </table>
 
           <div className={styles.buttonCadastrar}>
-          <button type="submit">CADASTRAR</button>
+          <ButtonAction 
+          icon={<ArrowCircleRight size={32} />}
+          name='Cadastrar'
+          />
           </div>
 
         </div>

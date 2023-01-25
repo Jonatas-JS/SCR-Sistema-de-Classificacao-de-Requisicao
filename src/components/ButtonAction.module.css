@@ -1,0 +1,16 @@
+.button button {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding: .56rem 1rem;
+  gap: .2rem;
+
+  color: var(--white-100);
+  background-color: var(--blue-300);
+  border: 2px solid var(--white-100);
+  border-radius: .62rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-weight: 700;
+  cursor: pointer;
+}
