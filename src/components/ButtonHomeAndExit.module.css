@@ -25,7 +25,6 @@
 }
 .homeButton span, .exitButton span {
   display: flex;
-  /* align-items: center; */
 }
 .homeButton a {
   color: var(--blue-300);
@@ -40,5 +39,4 @@
 .exitButton a:hover {
   color: var(--white-100);
   background-color: var(--red-100);
-
 }
