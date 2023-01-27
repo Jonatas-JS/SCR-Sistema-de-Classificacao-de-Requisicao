@@ -49,11 +49,14 @@ function RequestPage() {
               <input type="text" id="notaFiscal" />
             </div>
 
-            <label>Resquisição: </label>
-            <input type="date" id="" />
+            <div>
+              <label>Resquisição: </label>
+              <input type="date" id="" />
+            </div>
           </div>
+            
 
-          <p><label>Descrição: </label></p>
+          <p className={styles.labelDescrição}><label>Descrição: </label></p>
           <textarea cols="30" rows="10"  placeholder='Breve descrição da requisição.'></textarea>
         </div>
 
@@ -64,7 +67,7 @@ function RequestPage() {
             />
 
             <ButtonAction 
-            icon={<UserCircle size={25} />}
+            icon={<ListPlus size={25} weight='bold'/>}
             name='Cadastrar'
             />
         </div>

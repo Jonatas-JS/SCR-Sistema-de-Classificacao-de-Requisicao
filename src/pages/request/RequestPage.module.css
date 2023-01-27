@@ -12,7 +12,7 @@
 .form {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
+  justify-content: space-between;
   gap: 1rem;
 }
 .notaFiscal input {
@@ -20,11 +20,15 @@
 }
 .nfRequisicao {
   display: flex;
+  justify-content: space-between;
   width: 100%;
-
-  gap: 1rem;
 }
 .buttonsAvtions {
   display: flex;
   justify-content: space-between;
+}
+.labelDescrição {
+  text-align: left;
+  width: 100%;
+  margin-bottom: -0.7rem;
 }

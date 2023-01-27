@@ -108,7 +108,7 @@ function RegistrationPage() {
 
           <div className={styles.buttonCadastrar}>
           <ButtonAction 
-          icon={<ArrowCircleRight size={32} />}
+          icon={<ArrowCircleRight size={25} weight='bold'/>}
           name='Cadastrar'
           />
           </div>

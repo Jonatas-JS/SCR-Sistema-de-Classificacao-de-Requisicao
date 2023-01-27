@@ -1,5 +1,5 @@
 import styles from './LoginPage.module.css'
-import { Scroll, UserCircle } from 'phosphor-react'
+import { Scroll, UserCircle, ArrowCircleRight } from 'phosphor-react'
 import { Link } from 'react-router-dom';
 import { ButtonAction } from '../../components/ButtonAction'
 
@@ -54,7 +54,7 @@ function LoginPage() {
 
         <div className={styles.buttonAction}>
           <Link to='/home'><ButtonAction 
-          icon=''
+          icon={<ArrowCircleRight size={25} weight='bold'/>}
           name='Entrar'
           /></Link>
         </div>
