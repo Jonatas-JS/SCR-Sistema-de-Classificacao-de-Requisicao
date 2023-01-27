@@ -5,3 +5,35 @@
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: .62rem;
 }
+.formHeader p {
+  color: var(--blue-500);
+  font-size: .75rem;
+  font-weight: 400;
+}
+.formHeader table td {
+  text-align: left;
+  /* width: 100%; */
+}
+.formHeader table th {
+  text-align: left;
+  width: 7.5rem;
+}
+.formHeader table tr td {
+  color: var(--blue-500);
+}
+.formAvaliations {
+  display: flex;
+  align-items: center;
+}
+.headerLayer {
+  margin-bottom: -2rem;
+}
+.formAvaliacao h1 {
+  font-size: 1rem;
+}
+.formAvaliations svg path:hover {
+  fill: var(--yellow-100);
+
+  color: var(--yellow-100);
+  cursor: pointer;
+}
