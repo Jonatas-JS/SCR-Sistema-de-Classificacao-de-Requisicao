@@ -5,6 +5,17 @@ import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer'
 
 function FormPage() {
+
+  let starSelected = false
+
+  function selectStars() {
+    if (starSelected === false) {
+      console.log(starSelected = true)
+    } else {
+      console.log(starSelected = false)
+    }
+  }
+
   return (
     <div>
         <TitleLayer />
@@ -41,11 +52,11 @@ function FormPage() {
             <p>De 0 (zero) a 5 (cinco), como foi sua experiência com os nossos serviços?</p>
             <div className={styles.formAvaliations}>
               <label>Atendimento: </label>
-              <Star size={22} />
-              <Star size={22} />
-              <Star size={22} />
-              <Star size={22} />
-              <Star size={22} />
+              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
+              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
+              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
+              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
+              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
             </div>
           </div>
         </div>

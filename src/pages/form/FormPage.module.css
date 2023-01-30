@@ -1,14 +1,16 @@
 .container {
   min-width: 710px;
-  padding: 3.56rem 8rem;
+  padding: 3.56rem 2.12rem;
   background-color: var(--blue-300);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: .62rem;
 }
-.formHeader p {
+.formHeader p, .formAvaliacao p {
   color: var(--blue-500);
   font-size: .75rem;
   font-weight: 400;
+
+  text-align: left;
 }
 .formHeader table td {
   text-align: left;
@@ -37,3 +39,4 @@
   color: var(--yellow-100);
   cursor: pointer;
 }
+
