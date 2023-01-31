@@ -1,21 +1,12 @@
 import styles from './FormPage.module.css'
 
-import { CircleWavyCheck, Star } from 'phosphor-react'
+import { useState } from 'react';
+import { CircleWavyCheck, Star } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer'
 
 function FormPage() {
-
-  let starSelected = false
-
-  function selectStars() {
-    if (starSelected === false) {
-      console.log(starSelected = true)
-    } else {
-      console.log(starSelected = false)
-    }
-  }
-
+  const [rating, setRating] = useState(null)
   return (
     <div>
         <TitleLayer />
@@ -52,11 +43,21 @@ function FormPage() {
             <p>De 0 (zero) a 5 (cinco), como foi sua experiência com os nossos serviços?</p>
             <div className={styles.formAvaliations}>
               <label>Atendimento: </label>
-              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
-              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
-              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
-              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
-              <Star size={22} onClick={selectStars} className={styles.starSelected}/>
+              {[...Array(5)].map(( star, i ) => {
+                const ratingValue = i + 1
+
+                return (
+                  <label>
+                    <input 
+                      type="radio" 
+                      name="rating" 
+                      value={ratingValue}
+                      onClick={() => setRating(ratingValue)}
+                    />
+                    <Star size={22} className={styles.star} />
+                  </label>
+                )
+              })}
             </div>
           </div>
         </div>
