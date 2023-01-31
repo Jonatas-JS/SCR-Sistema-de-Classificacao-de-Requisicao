@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { CircleWavyCheck, Star } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer'
+import { Stars } from '../../components/Stars';
 
 function FormPage() {
-  const [rating, setRating] = useState(null)
+
   return (
     <div>
         <TitleLayer />
@@ -42,22 +43,25 @@ function FormPage() {
           <div>
             <p>De 0 (zero) a 5 (cinco), como foi sua experiência com os nossos serviços?</p>
             <div className={styles.formAvaliations}>
-              <label>Atendimento: </label>
-              {[...Array(5)].map(( star, i ) => {
-                const ratingValue = i + 1
+              <div>
+                <Stars 
+                name='Atendimento:'
+                />
 
-                return (
-                  <label>
-                    <input 
-                      type="radio" 
-                      name="rating" 
-                      value={ratingValue}
-                      onClick={() => setRating(ratingValue)}
-                    />
-                    <Star size={22} className={styles.star} />
-                  </label>
-                )
-              })}
+                <Stars 
+                name='Prazos:'
+                />
+
+                <Stars 
+                name='Feedback (comunicação):'
+                />
+              </div>
+              <div className={styles.comentario}>
+                <label>Comentário/observação:</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" />
+              </div>
+
+
             </div>
           </div>
         </div>
