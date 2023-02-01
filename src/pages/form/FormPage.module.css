@@ -14,7 +14,6 @@
 }
 .formHeader table td {
   text-align: left;
-  /* width: 100%; */
 }
 .formHeader table th {
   text-align: left;
@@ -41,5 +40,27 @@
   text-align: left;
 }
 .comentario textarea {
-  height: 35%;
+  height: 5.5rem;
+}
+.ActionButton {
+  display: flex;
+  justify-content: end;
+}
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* z-index: 1; */
+  width: 100%;
+  height: 100%;
+  background-color: var(--green-100);
+}
+.quadrado {
+  width: 5rem;
+  height: 5rem;
+
+  background-color: var(--blue-500);
 }

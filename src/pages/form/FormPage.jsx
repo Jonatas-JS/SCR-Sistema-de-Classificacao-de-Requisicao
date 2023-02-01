@@ -1,7 +1,8 @@
 import styles from './FormPage.module.css'
 
 import { useState } from 'react';
-import { CircleWavyCheck, Star } from 'phosphor-react';
+import { ButtonAction } from '../../components/ButtonAction'
+import { CircleWavyCheck, PaperPlaneTilt,Star } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer'
 import { Stars } from '../../components/Stars';
@@ -43,7 +44,7 @@ function FormPage() {
           <div>
             <p>De 0 (zero) a 5 (cinco), como foi sua experiência com os nossos serviços?</p>
             <div className={styles.formAvaliations}>
-              <div>
+              <div className={styles.AvaliationStars}>
                 <Stars 
                 name='Atendimento:'
                 />
@@ -56,15 +57,26 @@ function FormPage() {
                 name='Feedback (comunicação):'
                 />
               </div>
+
               <div className={styles.comentario}>
                 <label>Comentário/observação:</label>
-                <textarea name="comentario" id="comentario" cols="30" rows="10" />
+                <textarea name="comentario" id="comentario"/>
               </div>
 
-
             </div>
+
+            <div className={styles.ActionButton}>
+            <ButtonAction 
+            icon={<PaperPlaneTilt size={20} weight='bold'/>}
+            name='Enviar'
+            />
+            </div>
+
           </div>
         </div>
+      </div>
+      <div className={styles.background}>
+        <div className={styles.quadrado}></div>
       </div>
     </div>
   )
