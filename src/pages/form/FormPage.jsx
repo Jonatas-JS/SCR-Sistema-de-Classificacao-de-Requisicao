@@ -69,6 +69,7 @@ function FormPage() {
             <ButtonAction 
             icon={<PaperPlaneTilt size={20} weight='bold'/>}
             name='Enviar'
+            onClick={() => console.log('Chegeui')}
             />
             </div>
 
@@ -76,13 +77,13 @@ function FormPage() {
         </div>
       </div>
 
-      <div className={styles.background}>
+      {/* <div className={styles.background}>
         <div className={styles.concluded}>
           <CircleWavyCheck size={86} weight='bold' />
           <h1>Concluído</h1>
         </div>
-        <div><p>Obrigado por colaborar!</p></div>
-      </div>
+        <div className={styles.agradecimento}><p>Obrigado por colaborar!</p></div>
+      </div> */}
     </div>
   )
 }

@@ -68,3 +68,9 @@
 .concluded h1 {
   font-size: 4rem;
 }
+.agradecimento p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  
+  color: var(--blue-500);
+}

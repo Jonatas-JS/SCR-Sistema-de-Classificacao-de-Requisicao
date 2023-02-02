@@ -13,7 +13,7 @@
 input[type="radio"] {
   display: none;
 }
-svg path:hover {
+.star svg path:hover {
   fill: var(--yellow-100);
 
   color: var(--yellow-100);
