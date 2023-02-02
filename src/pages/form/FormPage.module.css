@@ -48,6 +48,7 @@
 }
 .background {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -58,9 +59,12 @@
   height: 100%;
   background-color: var(--green-100);
 }
-.quadrado {
-  width: 5rem;
-  height: 5rem;
+.concluded {
+  display: flex;
+  align-items: center;
 
-  background-color: var(--blue-500);
+  gap: .5rem;
+}
+.concluded h1 {
+  font-size: 4rem;
 }

@@ -75,8 +75,13 @@ function FormPage() {
           </div>
         </div>
       </div>
+
       <div className={styles.background}>
-        <div className={styles.quadrado}></div>
+        <div className={styles.concluded}>
+          <CircleWavyCheck size={86} weight='bold' />
+          <h1>Concluído</h1>
+        </div>
+        <div><p>Obrigado por colaborar!</p></div>
       </div>
     </div>
   )
