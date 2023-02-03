@@ -6,10 +6,14 @@ import { CircleWavyCheck, PaperPlaneTilt,Star } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer'
 import { Stars } from '../../components/Stars';
+import { ConcludedView } from '../../components/ConcludedView';
 
 function FormPage() {
   function renderConcluded() {
     const concluded = document.querySelector('.concludedLayer')
+    return (
+      <ConcludedView />
+    )
     
   }
 
@@ -78,14 +82,6 @@ function FormPage() {
 
           </div>
         </div>
-      </div>
-
-      <div className={styles.background}>
-        <div className={styles.concluded}>
-          <CircleWavyCheck size={86} weight='bold' />
-          <h1>Concluído</h1>
-        </div>
-        <div className={styles.agradecimento}><p>Obrigado por colaborar!</p></div>
       </div>
       <div className={styles.concludedLayer}></div>
     </div>
