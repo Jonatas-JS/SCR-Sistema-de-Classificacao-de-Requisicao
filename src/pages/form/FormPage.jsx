@@ -8,6 +8,10 @@ import { HeaderLayer } from '../../components/HeaderLayer'
 import { Stars } from '../../components/Stars';
 
 function FormPage() {
+  function renderConcluded() {
+    const concluded = document.querySelector('.concludedLayer')
+    
+  }
 
   return (
     <div>
@@ -69,7 +73,6 @@ function FormPage() {
             <ButtonAction 
             icon={<PaperPlaneTilt size={20} weight='bold'/>}
             name='Enviar'
-            onClick={() => console.log('Chegeui')}
             />
             </div>
 
@@ -77,13 +80,14 @@ function FormPage() {
         </div>
       </div>
 
-      {/* <div className={styles.background}>
+      <div className={styles.background}>
         <div className={styles.concluded}>
           <CircleWavyCheck size={86} weight='bold' />
           <h1>Concluído</h1>
         </div>
         <div className={styles.agradecimento}><p>Obrigado por colaborar!</p></div>
-      </div> */}
+      </div>
+      <div className={styles.concludedLayer}></div>
     </div>
   )
 }
