@@ -4,6 +4,7 @@ import { ListPlus, UserCircle, Paperclip } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
 import { ButtonAction } from '../../components/ButtonAction'
+import { Link } from 'react-router-dom';
 
 function RequestPage() {
   return (
@@ -65,11 +66,12 @@ function RequestPage() {
             icon={<Paperclip size={25} />}
             name='Anexar'
             />
-
-            <ButtonAction 
-            icon={<ListPlus size={25} weight='bold'/>}
-            name='Cadastrar'
-            />
+            <Link to='/concluded-page'>
+              <ButtonAction 
+              icon={<ListPlus size={25} weight='bold'/>}
+              name='Cadastrar'
+              />
+            </Link>
         </div>
 
       </div>

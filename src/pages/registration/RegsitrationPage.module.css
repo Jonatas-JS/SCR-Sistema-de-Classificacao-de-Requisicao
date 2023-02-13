@@ -25,6 +25,9 @@ table th {
   display: flex;
   justify-content: right;
 }
+.buttonCadastrar a {
+  text-decoration: none;
+}
 .inputMatricula input {
   width: 4rem;
 }

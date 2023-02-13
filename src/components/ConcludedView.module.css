@@ -1,4 +1,11 @@
+@keyframes Opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .background {
+  animation-name: Opacity;
+  animation-duration: 1s;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,7 +13,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  /* z-index: 1; */
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: var(--green-100);

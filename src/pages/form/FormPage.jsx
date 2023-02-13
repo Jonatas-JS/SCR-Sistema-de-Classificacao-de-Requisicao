@@ -1,21 +1,13 @@
 import styles from './FormPage.module.css'
 
-import { useState } from 'react';
 import { ButtonAction } from '../../components/ButtonAction'
-import { CircleWavyCheck, PaperPlaneTilt,Star } from 'phosphor-react';
+import { CircleWavyCheck, PaperPlaneTilt } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer'
 import { Stars } from '../../components/Stars';
-import { ConcludedView } from '../../components/ConcludedView';
+import { Link } from 'react-router-dom';
 
 function FormPage() {
-  function renderConcluded() {
-    const concluded = document.querySelector('.concludedLayer')
-    return (
-      <ConcludedView />
-    )
-    
-  }
 
   return (
     <div>
@@ -74,16 +66,20 @@ function FormPage() {
             </div>
 
             <div className={styles.ActionButton}>
-            <ButtonAction 
-            icon={<PaperPlaneTilt size={20} weight='bold'/>}
-            name='Enviar'
-            />
+              <div>
+                <Link to='/concluded-page'>
+                  <ButtonAction 
+                  icon={<PaperPlaneTilt size={20} weight='bold'/>}
+                  name='Enviar'
+                  />
+                </Link>
+
+              </div>
             </div>
 
           </div>
         </div>
       </div>
-      <div className={styles.concludedLayer}></div>
     </div>
   )
 }

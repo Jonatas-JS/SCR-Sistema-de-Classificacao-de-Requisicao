@@ -13,15 +13,14 @@ export function Stars({ name }) {
           const ratingValue = i + 1
 
           return (
-            <label>
+            <label className={styles.star} key={Math.random()}>
               <input 
                 type="radio" 
                 name="rating" 
                 value={ratingValue}
                 onClick={() => setRating(ratingValue)}
               />
-              <Star 
-                className={styles.star}
+              <Star
                 size={20} 
                 color={ratingValue <= rating ? "#FED501" : "#174164"}
                 weight="fill"

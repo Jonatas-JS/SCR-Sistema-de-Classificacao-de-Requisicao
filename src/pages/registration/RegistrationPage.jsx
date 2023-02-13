@@ -5,6 +5,7 @@ import { TitleLayer } from '../../components/TitleLayer';
 import { UserFocus, ArrowCircleRight } from 'phosphor-react';
 import { HeaderLayer } from '../../components/HeaderLayer'
 import { ButtonAction } from '../../components/ButtonAction';
+import { Link } from 'react-router-dom';
 
 export const ListEmpresa = [
   {
@@ -107,10 +108,12 @@ function RegistrationPage() {
           </table>
 
           <div className={styles.buttonCadastrar}>
-          <ButtonAction 
-          icon={<ArrowCircleRight size={25} weight='bold'/>}
-          name='Cadastrar'
-          />
+            <Link to='/concluded-page'>
+              <ButtonAction 
+              icon={<ArrowCircleRight size={25} weight='bold'/>}
+              name='Cadastrar'
+              />
+            </Link>
           </div>
 
         </div>

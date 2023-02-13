@@ -6,6 +6,7 @@ import HomePage from './pages/home/HomePage'
 import RegistrationPage from './pages/registration/RegistrationPage'
 import RequestPage from './pages/request/RequestPage'
 import FormPage from './pages/form/FormPage'
+import ConcludedView from './components/ConcludedView'
 import DashboardPage from './pages/dashboard/DashboardPage'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/registration' element={(<RegistrationPage />)} />
           <Route path='/request' element={(<RequestPage />)} />
           <Route path='/form-page' element={(<FormPage />)} />
+          <Route path='/concluded-page' element={(<ConcludedView />)} />
           <Route path='/dashboard' element={(<DashboardPage />)} />
         </Routes>
       </Router>

@@ -27,6 +27,9 @@
   display: flex;
   justify-content: space-between;
 }
+.buttonsAvtions a {
+  text-decoration: none;
+}
 .labelDescrição {
   text-align: left;
   width: 100%;
