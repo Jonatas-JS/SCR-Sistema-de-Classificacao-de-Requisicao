@@ -5,3 +5,31 @@
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: .62rem;
 }
+.container p {
+  text-align: left;
+}
+.tableDashboard {
+  background-color: var(--white-100);
+
+  margin: .68rem 0;
+  border-radius: .62rem;
+}
+.tableDashboard thead th {
+  color: var(--grey-300);
+}
+.theadButons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: .5rem;
+}
+.theadButons svg {
+  cursor: pointer;
+}
+.theadButons svg:last-child {
+  color: var(--red-200);
+}
+.trBody {
+  color: var(--blue-300)
+}
