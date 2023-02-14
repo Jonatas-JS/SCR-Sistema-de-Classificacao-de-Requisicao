@@ -1,7 +1,7 @@
 import styles from './HomePage.module.css'
 
 import { MenuButton } from '../../components/MenuButton';
-import { House, UserFocus, ListPlus, CircleWavyCheck } from 'phosphor-react'
+import { House, UserFocus, Gauge, ListPlus, CircleWavyCheck } from 'phosphor-react'
 import { userType } from '../login/LoginPage';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
@@ -27,6 +27,7 @@ function HomePage() {
                 </Link>
               </div>
             : null }
+
             {userType != 'user' ?
             <div>
               <Link to='/request'>
@@ -37,6 +38,7 @@ function HomePage() {
               </Link>
             </div>
             : null }
+            
             <div>
               <Link to='/form-page'>
                 <MenuButton 
@@ -45,6 +47,16 @@ function HomePage() {
                 />
               </Link>
             </div>
+            {userType === 'adm' ?
+              <div>
+                <Link to='/dashboard'>
+                  <MenuButton 
+                  icon={<Gauge size={36} weight='bold'/>}
+                  name='Dashboard de Acompanhamento'
+                  />
+                </Link>
+              </div>
+            :null}
           </div>
         </div>
     </div>
