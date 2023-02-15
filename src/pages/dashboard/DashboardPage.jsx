@@ -3,6 +3,7 @@ import styles from './DashboardPage.module.css'
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
 import { Gauge, PencilSimpleLine, Trash } from 'phosphor-react'
+import { ItemDashboard } from '../../components/ItemDashboard';
 
 function DashboardPage() {
   return (
@@ -43,13 +44,7 @@ function DashboardPage() {
             <tbody>
               {[...Array(6)].map((tr, i) => {
               return (
-                <tr className={styles.trBody}>
-                  {[...Array(11)].map((tb, i) => {
-                    return (
-                      <td>{i}</td>
-                    )
-                  })}
-                </tr>
+                <ItemDashboard />
               )
               })}
             </tbody>
