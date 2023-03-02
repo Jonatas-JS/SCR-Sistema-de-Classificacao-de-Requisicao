@@ -1,3 +1,22 @@
 .trBody {
   color: var(--blue-300)
 }
+.buttonsAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: .5rem;
+}
+.buttonsAction svg {
+  cursor: pointer;
+}
+.buttonsAction svg:hover {
+  color: var(--blue-500);
+}
+.buttonsAction svg:last-child {
+  color: var(--red-100);
+}
+.buttonsAction svg:last-child:hover {
+  color: var(--red-200);
+}
