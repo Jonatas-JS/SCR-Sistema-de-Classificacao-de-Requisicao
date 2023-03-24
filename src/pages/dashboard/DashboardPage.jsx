@@ -4,8 +4,10 @@ import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
 import { Gauge, PencilSimpleLine, Trash } from 'phosphor-react'
 import { ItemDashboard } from '../../components/ItemDashboard';
+import { database } from '../../database/database';
 
 function DashboardPage() {
+  console.log(database)
   return (
     <div>
         <TitleLayer />

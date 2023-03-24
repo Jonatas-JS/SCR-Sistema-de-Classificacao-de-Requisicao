@@ -1,6 +1,10 @@
 .trBody {
   color: var(--blue-300)
 }
+.trBody td:first-child {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .buttonsAction {
   display: flex;
   justify-content: center;
