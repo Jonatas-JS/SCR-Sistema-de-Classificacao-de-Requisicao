@@ -1,10 +1,31 @@
 import styles from './RequestPage.module.css';
 
-import { ListPlus, UserCircle, Paperclip } from 'phosphor-react';
+import { ListPlus, Paperclip } from 'phosphor-react';
 import { TitleLayer } from '../../components/TitleLayer';
 import { HeaderLayer } from '../../components/HeaderLayer';
 import { ButtonAction } from '../../components/ButtonAction'
 import { Link } from 'react-router-dom';
+import { ListEmpresa } from '../registration/RegistrationPage';
+
+export const validacoesDeRequisicao = [
+  'clientes', 'game'
+]
+
+console.log(validacoesDeRequisicao.length)
+
+
+const renderListEmpresa = () => ListEmpresa.map(
+  (item) => <option>{item.name}</option>
+)
+// const renderListCliente = () => validacoesDeRequisicao.clientes.map(
+//   (item) => <option>{item.name}</option>
+//   )
+// const renderListResponsavel = () => validacoesDeRequisicao.responsavel.map(
+//   (item) => <option>{item.name}</option>
+// )
+// const renderListSetor = () => validacoesDeRequisicao.setores.map(
+//   (item) => <option>{item.name}</option>
+// )
 
 function RequestPage() {
   return (
@@ -20,6 +41,7 @@ function RequestPage() {
             <label>Empresa: </label>
             <select>
               <option value="option" selected disabled >Escolha a Empresa</option>
+              {renderListEmpresa()}
             </select>
           </div>
 
