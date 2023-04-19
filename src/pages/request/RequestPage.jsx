@@ -8,18 +8,43 @@ import { Link } from 'react-router-dom';
 import { ListEmpresa } from '../registration/RegistrationPage';
 
 export const validacoesDeRequisicao = [
-  'clientes', 'game'
+  {
+    clientes: [
+      {
+        id: 0,
+        name: 'Marcio',
+      },
+      {
+        id: 1,
+        name: 'Camila',
+      },
+      {
+        id: 2,
+        name: 'Eduardo',
+      }
+    ],
+    responsaveis: [
+      {
+        id: 0,
+        name: 'Comprador 1',
+      },
+      {
+        id: 1,
+        name: 'Comprador 2',
+      },
+    ]
+  }
 ]
 
-console.log(validacoesDeRequisicao.length)
+console.log(validacoesDeRequisicao)
 
 
 const renderListEmpresa = () => ListEmpresa.map(
   (item) => <option>{item.name}</option>
 )
-// const renderListCliente = () => validacoesDeRequisicao.clientes.map(
-//   (item) => <option>{item.name}</option>
-//   )
+const renderListCliente = () => validacoesDeRequisicao[0].clientes.map(
+  (item) => <option>{item.name}</option>
+  )
 // const renderListResponsavel = () => validacoesDeRequisicao.responsavel.map(
 //   (item) => <option>{item.name}</option>
 // )
@@ -49,6 +74,7 @@ function RequestPage() {
             <label>Cliente: </label>
             <select>
               <option selected disabled >Escolha o Cliente</option>
+              {renderListCliente()}
             </select>
           </div>
 
